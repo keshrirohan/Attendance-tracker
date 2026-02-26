@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://attendance4utracker.vercel.app/sitemap.xml
