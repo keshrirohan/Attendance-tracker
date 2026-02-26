@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attendance Calculator</title>
+
+    <style>
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body class="bg-orange-50 min-h-screen flex items-center justify-center">
+    <!-- CARD -->
+    <div
+      class="bg-white rounded-xl shadow-lg p-6 w-full max-w-md border border-orange-100 transition hover:shadow-xl"
+    >
+      <!-- TITLE -->
+      <h1 class="text-2xl font-bold text-center text-orange-500 mb-6">
+        Attendance Calculator
+      </h1>
+
+      <form class="space-y-4" id="percentageForm">
+        <!-- Required -->
+        <div>
+          <label class="text-sm text-gray-600">Required Attendance %</label>
+          <select
+            id="percentageRequired"
+            class="w-full mt-1 border border-orange-200 rounded px-3 py-2 focus:ring-2 focus:ring-orange-400 outline-none"
+          ></select>
+        </div>
+
+        <!-- Current -->
+        <div>
+          <label class="text-sm text-gray-600">Your Current %</label>
+          <input
+            id="yourPercentage"
+            type="number"
+            class="w-full mt-1 border border-orange-200 rounded px-3 py-2 focus:ring-2 focus:ring-orange-400 outline-none"
+            placeholder="e.g. 69%"
+          />
+        </div>
+
+        <!-- Total -->
+        <div>
+          <label class="text-sm text-gray-600">Total Classes</label>
+          <input
+            id="totalClass"
+            type="number"
+            class="w-full mt-1 border border-orange-200 rounded px-3 py-2 focus:ring-2 focus:ring-orange-400 outline-none"
+            placeholder="e.g. 96"
+          />
+        </div>
+
+        <!-- Button -->
+        <button
+          type="submit"
+          class="w-full bg-orange-500 text-white py-2 rounded-lg font-semibold transition hover:bg-orange-600 active:scale-95"
+        >
+          Calculate
+        </button>
+      </form>
+
+      <!-- Result -->
+      <div
+        id="result"
+        class="mt-6 text-center font-semibold text-gray-700 transition-all duration-300"
+      >
+        Result will appear here
+      </div>
+
+      <!-- Present Count -->
+      <div
+        id="totalPresent"
+        class="mt-2 text-sm text-gray-500 text-center hidden"
+      >
+        Total attended:
+        <span id="totalPresentValue" class="font-bold text-orange-500"></span>
+      </div>
+
+      <!-- Dev Tag -->
+      <p class="text-center text-xs text-gray-400 mt-6">
+        Built with 🧡 by
+        <span class="font-semibold text-orange-500">Keshri</span>
+      </p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
